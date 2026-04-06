@@ -1,1 +1,14 @@
 .idea
+.vscode/
+web/
+
+# Upload files
+server/upload/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+*.docx
