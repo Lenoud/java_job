@@ -16,8 +16,10 @@ const service: AxiosInstance = axios.create({
 service.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
 
-    config.headers.ADMINTOKEN = localStorage.getItem(ADMIN_USER_TOKEN)
-    config.headers.TOKEN = localStorage.getItem(USER_TOKEN)
+    const token = localStorage.getItem(ADMIN_USER_TOKEN) || localStorage.getItem(USER_TOKEN)
+    if (token && token !== 'null') {
+      config.headers.Authorization = `Bearer ${token}`
+    }
 
     return config;
   },
