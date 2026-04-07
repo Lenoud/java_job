@@ -39,8 +39,8 @@
         <a-descriptions-item label="系统语言">
           {{ data.sysLan }}
         </a-descriptions-item>
-        <a-descriptions-item label="Java版本">
-          {{ data.jvmVersion }}
+        <a-descriptions-item label="Go版本">
+          {{ data.goVersion }}
         </a-descriptions-item>
         <a-descriptions-item label="系统时区">
           {{ data.sysZone }}
